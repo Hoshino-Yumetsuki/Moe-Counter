@@ -1,6 +1,6 @@
 # Moe-Counter
 
-多种风格可选的萌萌计数器
+多种风格可选的萌萌计数器(express模块)
 
 ![Moe-Counter](https://count.getloli.com/get/@Moe-counter.github)
 
@@ -42,31 +42,22 @@ $ yarn install
 $ yarn start
 ```
 
-### Configuration
+#### Run on Vercel
 
-`config.yml`
+- Click the Button [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/grbnb/moe-counter-vercel/tree/vercel&env=DB_URL,DB_UPSERT,DELAY_SEC,VIEW_LEN&envDescription=🧡💘💖&envLink=https://github.com/grbnb/moe-counter-vercel/tree/vercel#environment-variables)
+- Just hit the **Github** button
+- Fill in the **Repository Name** blank
+- And fill in **environment-variables** value
+- Hit the **Deploy** button
 
-```yaml
-app:
-  # site: https://count.getloli.com # your website
-  port: 3000
+### Environment Variables
 
-db:
-  type: sqlite # sqlite or mongodb
-```
-
-If you use mongodb, you need to specify the environment variable `DB_URL`
-
-```shell
-# eg:
-export DB_URL=mongodb+srv://account:passwd@***.***.***.mongodb.net/db_count
-```
-
-replit can use Secrets, [documentation](https://docs.replit.com/programming-ide/storing-sensitive-information-environment-variables)
-
-```
-DB_URL="mongodb+srv://account:passwd@***.***.***.mongodb.net/db_count"
-```
+| Key                | Description                                                                           |
+| ------------------ | ------------------------------------------------------------------------------------- |
+| DB_URL             | `mongodb+srv://account:passwd@***.***.***.mongodb.net/db_count` **MongoDB login**: [mongodb](https://cloud.mongodb.com)|
+| DB_UPSERT          | [Insert new document]`true`or`false`, default=`false`(Update only existing documents) |
+| DELAY_SEC          | [Delayed writing to database] set scope `1-180`sec ,default=`60`                      |
+| VIEW_LEN           | [Moe-Counter display length] set scope `5-18` , default=`7`                           |
 
 ## Credits
 
