@@ -2,53 +2,39 @@
 
 多种风格可选的萌萌计数器(express模块)
 
-![Moe-Counter](https://count.getloli.com/get/@Moe-counter.github)
+![Moe-Counter](https://moe-counter.anjiurine.top/get/@Moe-counter.github)
 
 <details>
 <summary>More theme</summary>
 
 ##### asoul
-![asoul](https://count.getloli.com/get/@demo?theme=asoul)
+![asoul](https://moe-counter.anjiurine.top/get/@demo?theme=asoul)
 
 ##### moebooru
-![moebooru](https://count.getloli.com/get/@demo?theme=moebooru)
+![moebooru](https://moe-counter.anjiurine.top/get/@demo?theme=moebooru)
 
 ##### rule34
-![Rule34](https://count.getloli.com/get/@demo?theme=rule34)
+![Rule34](https://moe-counter.anjiurine.top/get/@demo?theme=rule34)
 
 ##### gelbooru
-![Gelbooru](https://count.getloli.com/get/@demo?theme=gelbooru)</details>
+![Gelbooru](https://moe-counter.anjiurine.top/get/@demo?theme=gelbooru)</details>
 
 ## Demo
-[https://count.getloli.com](https://count.getloli.com)
+[https://moe-counter.anjiurine.top](https://moe-counter.anjiurine.top)
 
 ## Usage
 
 ### Install
 
-#### Run on Replit
-
-- Open the url [https://replit.com/@journeyad/Moe-Counter](https://replit.com/@journeyad/Moe-Counter)
-- Just hit the **Fork** button
-- And hit the **Run** button
-
 #### Deploying on your own server
 
 ```shell
-$ git clone https://github.com/journey-ad/Moe-Counter.git
+$ git clone https://github.com/Hoshino-Yumetsuki/Moe-Counter.git
 $ cd Moe-Counter
 $ yarn install
 
 $ yarn start
 ```
-
-#### Run on Vercel
-
-- Click the Button [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/grbnb/moe-counter-vercel/tree/vercel&env=DB_URL,DB_UPSERT,DELAY_SEC,VIEW_LEN&envDescription=🧡💘💖&envLink=https://github.com/grbnb/moe-counter-vercel/tree/vercel#environment-variables)
-- Just hit the **Github** button
-- Fill in the **Repository Name** blank
-- And fill in **environment-variables** value
-- Hit the **Deploy** button
 
 ### Environment Variables
 

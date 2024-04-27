@@ -2,14 +2,23 @@
 
 const fs = require('fs')
 const express = require('express')
+const path = require('path');
 
-const db = require('../db/mongodb')
-const themify = require('../utils/themify')
+
+const db = require('./db/mongodb')
+const themify = require('./utils/themify')
 
 let PLACES = parseInt(process.env.VIEW_LEN)
 PLACES >= 5 && PLACES <= 18 ? NaN : PLACES = 7
 
 const app = express()
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Remove the wildcard (*) route for 404
+app.get('/', function(req, res) {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
 
 // get the image
 app.get('/get/@:name', async (req, res) => {
@@ -17,7 +26,7 @@ app.get('/get/@:name', async (req, res) => {
   const { theme = 'moebooru' } = req.query
   let length = PLACES
 
-  // This helps with GitHub's image cache 
+  // This helps with GitHub's image cache
   res.set({
     'content-type': 'image/svg+xml',
     'cache-control': 'max-age=0, no-cache, no-store, must-revalidate'
@@ -55,10 +64,6 @@ app.get('/heart-beat', (req, res) => {
 
   res.send('alive')
   console.log('heart-beat')
-});
-
-app.get('*', function (req, res){
-  res.send('<p>404</p>');
 });
 
 const port = process.env.PORT || 3001;
