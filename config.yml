@@ -3,5 +3,5 @@ app:
   port: 3000
 
 db:
-  type: sqlite # sqlite or mongodb
-  interval: 60 # write to db interval in seconds (0 for realtime)
+  type: mongodb # sqlite or mongodb
+  interval: 0 # write to db interval in seconds (0 for realtime)
